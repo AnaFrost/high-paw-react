@@ -1,0 +1,115 @@
+.card {
+  position: relative;
+  background-color: #fff;
+  width: 282px;
+  height: 362px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__title {
+  color: #000;
+  padding-left: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+.card__discription {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.card__image {
+  width: 282px;
+  height: 282px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__like-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  width: 26px;
+  height: 26px;
+  transition: 0.3s transform ease-in;
+}
+
+.card__like-btn:hover {
+  transform: scale(1.3);
+  transition: 0.3s transform ease-in;
+}
+
+.marker__image {
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  width: 24px;
+  height: 24px;
+}
+
+.card-marker {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  box-sizing: border-box;
+  padding: 6px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #f4f4f4b6;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-marker:hover > .card-marker__menu {
+  height: 60px;
+}
+
+.card-marker:hover > .card-marker__menu > .card__delete-btn {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s all ease-in;
+  transition-delay: 0.4s;
+}
+
+.card__delete-btn {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s all ease-in;
+}
+
+.card-marker__menu {
+  position: absolute;
+  background-color: #fff;
+  top: 18px;
+  box-sizing: border-box;
+  padding: 0 6px 0;
+  width: 38px;
+  height: 0;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 0 0 12px 12px;
+  transition: 0.6s height ease-in;
+}
