@@ -1,0 +1,12 @@
+.app {
+  min-height: 100vh;
+  background-color: #292929;
+  font-family: "OleoScript", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app_with_popup {
+  overflow-y: hidden;
+}

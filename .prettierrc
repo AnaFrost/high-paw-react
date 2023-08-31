@@ -1,0 +1,11 @@
+{
+  "trailingComma": "all",
+  "rules": {
+    "prettier/prettier": [
+      true, {
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ]
+  }
+}
