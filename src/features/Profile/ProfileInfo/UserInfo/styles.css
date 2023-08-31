@@ -1,0 +1,40 @@
+.user__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  width: 100%;
+}
+
+.user__container {
+  display: flex;
+}
+
+.user__container-info {
+  margin-right: 20px;
+}
+
+.user__name {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  padding-bottom: 16px;
+}
+
+.user__bio {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media (max-width: 926px) {
+  .user__name {
+    font-size: 27px;
+    line-height: 32px;
+    padding-bottom: 14px;
+  }
+  .user__bio {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
