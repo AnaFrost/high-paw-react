@@ -2,10 +2,12 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@components": ["./components"],
+      "@common": ["./common"],
       "@features": ["./features"],
-      "@images": ["./images"],
-      "@icons": ["./icons"]
+      "@entities": ["./entities"],
+      "@widgets": ["./widgets"],
+      "@images": ["./shared/images"],
+      "@icons": ["./shared/icons"]
     }
   },
   "exclude": ["node_modules"]

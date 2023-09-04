@@ -32,10 +32,12 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@components", "./src/components"],
+          ["@common", "./src/common"],
+          ["@entities", "./src/entities"],
           ["@features", "./src/features"],
-          ["@images", "./src/images"],
-          ["@icons", "./src/icons"]
+          ["@widgets", "./src/widgets"],
+          ["@images", "./src/shared/images"],
+          ["@icons", "./src/shared/icons"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }

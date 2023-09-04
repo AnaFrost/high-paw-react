@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "./components/Card";
+import { Card } from "@entities/Card";
 import { CatMarkerIcon, DogMarkerIcon, UnicornMarkerIcon } from "@icons";
 
 import GoliafImg from "@images/goliaf.jpg";

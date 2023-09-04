@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { LikeIcon, TrashBinIcon } from "@icons";
+import { LikeButton, DeleteButton } from "@common/Buttons";
+
 import "./styles.css";
 
 export function Card({ image, type, text }) {
@@ -11,16 +12,12 @@ export function Card({ image, type, text }) {
       <div className="card-marker">
         <div className="marker__image">{type}</div>
         <div className="card-marker__menu">
-          <button className="card__delete-btn">
-            <TrashBinIcon />
-          </button>
+          <DeleteButton />
         </div>
       </div>
       <div className="card__discription">
         <h3 className="card__title">{text}</h3>
-        <button className="card__like-btn">
-          <LikeIcon />
-        </button>
+        <LikeButton />
       </div>
     </div>
   );
@@ -28,6 +25,6 @@ export function Card({ image, type, text }) {
 
 Card.propTypes = {
   image: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.element,
   text: PropTypes.string,
 };
