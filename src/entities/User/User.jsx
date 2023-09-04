@@ -1,13 +1,13 @@
 import React from "react";
-import { ProfileAvatar } from "./ProfileAvatar";
+import { UserAvatar } from "./UserAvatar";
 import { UserInfo } from "./UserInfo";
 
 import "./styles.css";
 
-export function ProfileInfo() {
+export function User() {
   return (
-    <div className="profile__info">
-      <ProfileAvatar />
+    <div className="user">
+      <UserAvatar />
       <UserInfo name="Jacques-Meow Coustou" bio="Bed explorer" />
     </div>
   );

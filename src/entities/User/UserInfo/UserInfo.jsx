@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Button } from "@components/common/Buttons";
+import { EditButton, AddCardButton } from "@common/Buttons";
 
 import "./styles.css";
 
@@ -13,9 +13,9 @@ export function UserInfo({ name, bio }) {
           <span className="user__name">{name}</span>
           <p className="user__bio">{bio}</p>
         </div>
-        <Button edit={true} />
+        <EditButton />
       </div>
-      <Button add={true} />
+      <AddCardButton />
     </div>
   );
 }

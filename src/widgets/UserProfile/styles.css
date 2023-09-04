@@ -1,4 +1,4 @@
-.profile {
+.user-profile {
   width: 100%;
   max-width: 880px;
   display: flex;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 926px) {
-  .profile {
+  .user-profile {
     flex-direction: column;
   }
 }
