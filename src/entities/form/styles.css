@@ -1,0 +1,36 @@
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  width: 430px;
+  height: 330px;
+  border-radius: 10px;
+}
+
+.form__title {
+  color: black;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.radio-btn-container {
+  display: flex;
+  width: 358px;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 282px;
+    height: 322px;
+  }
+  .form__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
