@@ -1,14 +1,14 @@
-import React from "react";
-import { UserAvatar } from "./UserAvatar";
-import { UserInfo } from "./UserInfo";
+import React, { FC } from "react";
+import { UserAvatar } from "./userAvatar";
+import { UserInfo } from "./userInfo";
 
 import "./styles.css";
 
-export function User() {
+export const User: FC = () => {
   return (
     <div className="user">
       <UserAvatar />
       <UserInfo name="Jacques-Meow Coustou" bio="Bed explorer" />
     </div>
   );
-}
+};

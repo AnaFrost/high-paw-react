@@ -1,5 +1,5 @@
-import React from "react";
-import { Card } from "@entities/Card";
+import React, { FC } from "react";
+import { Card } from "@entities/card";
 import { CatMarkerIcon, DogMarkerIcon, UnicornMarkerIcon } from "@icons";
 
 import GoliafImg from "@images/goliaf.jpg";
@@ -18,8 +18,8 @@ const MARKER_CAT = <CatMarkerIcon />;
 const MARKER_DOG = <DogMarkerIcon />;
 const MARKER_OTHER = <UnicornMarkerIcon />;
 
-const getCardTypeLink = (type) => {
-  switch (type) {
+const getCardTypeLink = (typeAnimal: string) => {
+  switch (typeAnimal) {
     case "cat":
       return MARKER_CAT;
     case "dog":
@@ -33,63 +33,63 @@ const initialCards = [
   {
     description: "I`m sweety chocolate maffin",
     link: GoliafImg,
-    type: getCardTypeLink("cat"),
+    typeAnimal: getCardTypeLink("cat"),
   },
   {
     description: "i`m Luckyy and i`m cute",
     link: LakkyImg,
-    type: getCardTypeLink("cat"),
+    typeAnimal: getCardTypeLink("cat"),
   },
   {
     description: "Hey, find me :з",
     link: PrudenceImg,
-    type: getCardTypeLink("dog"),
+    typeAnimal: getCardTypeLink("dog"),
   },
   {
     description: "Meowlax",
     link: MyakaImg,
-    type: getCardTypeLink("cat"),
+    typeAnimal: getCardTypeLink("cat"),
   },
   {
     description: "Puppy U・ᴥ・U",
     link: PrudenceImg2,
-    type: getCardTypeLink("dog"),
+    typeAnimal: getCardTypeLink("dog"),
   },
   {
     description: "Rats <3",
     link: RatsfImg,
-    type: getCardTypeLink("other"),
+    typeAnimal: getCardTypeLink("other"),
   },
   {
     description: "Nya nya",
     link: LakkyImg2,
-    type: getCardTypeLink("cat"),
+    typeAnimal: getCardTypeLink("cat"),
   },
   {
     description: ":3",
     link: LakkyImg3,
-    type: getCardTypeLink("cat"),
+    typeAnimal: getCardTypeLink("cat"),
   },
   {
     description: "O_O",
     link: MyakaImg2,
-    type: getCardTypeLink("cat"),
+    typeAnimal: getCardTypeLink("cat"),
   },
 ];
 
-export function Gallery() {
+export const Gallery: FC = () => {
   return (
-    <div className="gallery">
+    <section className="gallery">
       {initialCards.map((card) => {
         return (
           <Card
             key={card.link}
             text={card.description}
             image={card.link}
-            type={card.type}
+            typeAnimal={card.typeAnimal}
           />
         );
       })}
-    </div>
+    </section>
   );
-}
+};

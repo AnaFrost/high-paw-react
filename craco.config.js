@@ -1,17 +1,19 @@
 const path = require("path");
 
-const resolvePath = (p) => path.resolve(__dirname, p);
-
 module.exports = {
   webpack: {
+    configure: {
+      module: {
+        rules: [{ test: /\\.(png|jp(e*)g|svg|gif)$/, use: ["file-loader"] }],
+      },
+    },
     alias: {
-      "@common": resolvePath("./src/common"),
-      "@features": resolvePath("./src/features"),
-      "@entities": resolvePath("./src/entities"),
-      "@widgets": resolvePath("./src/widgets"),
-      "@images": resolvePath("./src/shared/images"),
-      "@icons": resolvePath("./src/shared/icons"),
-      "@services": resolvePath("./src/services"),
+      "@common": path.resolve(__dirname, "src/common"),
+      "@entities": path.resolve(__dirname, "src/entities"),
+      "@features": path.resolve(__dirname, "src/features"),
+      "@widgets": path.resolve(__dirname, "src/widgets"),
+      "@images": path.resolve(__dirname, "src/shared/images"),
+      "@icons": path.resolve(__dirname, "src/shared/icons"),
     },
   },
 };

@@ -1,8 +1,8 @@
 import React from "react";
-import { Header } from "@widgets/Header";
-import { UserProfile } from "@widgets/UserProfile";
-import { Gallery } from "@widgets/Gallery";
-import { Footer } from "@widgets/Footer";
+import { Header } from "@widgets/header";
+import { UserProfile } from "@widgets/userProfile";
+import { Gallery } from "@widgets/gallery";
+import { Footer } from "@widgets/footer";
 
 import "./App.css";
 

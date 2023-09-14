@@ -48,7 +48,24 @@
   height: 50px;
 }
 
+.button-submit_inactive {
+  padding: 0;
+  border: 2px solid;
+  background-color: #fff;
+  width: 358px;
+  height: 50px;
+  color: lightgrey;
+}
+
+.button-submit_inactive:hover {
+  cursor: default;
+  opacity: 1;
+}
+
 .button-close {
+  position: absolute;
+  top: 180px;
+  right: 540px;
   border: none;
 }
 

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
 import "./styles.css";
 
-export function Footer() {
+export const Footer: FC = () => {
   return (
     <footer className="footer">
       <span className="footer__copyright">&#169; 2022 High paw</span>
     </footer>
   );
-}
+};
