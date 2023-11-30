@@ -18,6 +18,7 @@
   overflow: hidden;
   margin: 0;
 }
+
 .card__discription {
   display: flex;
   justify-content: space-between;
@@ -29,6 +30,24 @@
   height: 282px;
   object-fit: cover;
   object-position: center;
+}
+
+.card__image_popup {
+  max-width: 75vw;
+  max-height: 75vh;
+  padding-bottom: 10px;
+}
+
+.card__discription-popup {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.popup_image__content {
+  position: relative;
 }
 
 .marker__image {

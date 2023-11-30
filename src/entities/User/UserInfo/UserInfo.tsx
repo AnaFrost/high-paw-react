@@ -3,26 +3,32 @@ import React from "react";
 import { AddCardModal } from "@entities/addCardModal";
 import { EditProfileModal } from "@entities/editProfileModal";
 
-import "./styles.css";
+import {
+  UserInfoEl,
+  ContainerEl,
+  ContainerInfoEl,
+  UserNameEl,
+  UserBioEl,
+} from "../User.styled";
 
 interface IUserInfo {
-  name: string;
-  bio: string;
+  userName: string;
+  userBio: string;
 }
 
-export const UserInfo: React.FC<IUserInfo> = ({ name, bio }) => {
+export const UserInfo: React.FC<IUserInfo> = ({ userName, userBio }) => {
   return (
     <>
-      <div className="user__info">
-        <div className="user__container">
-          <div className="user__container-info">
-            <span className="user__name">{name}</span>
-            <p className="user__bio">{bio}</p>
-          </div>
+      <UserInfoEl>
+        <ContainerEl>
+          <ContainerInfoEl>
+            <UserNameEl>{userName}</UserNameEl>
+            <UserBioEl>{userBio}</UserBioEl>
+          </ContainerInfoEl>
           <EditProfileModal />
-        </div>
+        </ContainerEl>
         <AddCardModal />
-      </div>
+      </UserInfoEl>
     </>
   );
 };

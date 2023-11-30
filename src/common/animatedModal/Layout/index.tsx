@@ -2,9 +2,10 @@ import React, { FC, useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import { ANIMATION_TIME } from "./const";
-import "./styles.css";
+
 import "./animation.css";
-import { Button } from "@common/buttons";
+import { InvisibleButtonEl, CloseButtonEl } from "@common/buttons";
+import { Container, Overlay, Content } from "./Layout.styled";
 import { CloseIcon } from "@icons";
 
 const overlayAnimation = {
@@ -38,7 +39,7 @@ export const Layout: FC<ILayout> = ({ onClose, children, opened }) => {
   }, [opened]);
 
   return (
-    <div className="container">
+    <Container>
       <CSSTransition
         in={animationIn}
         nodeRef={overlayRef}
@@ -47,11 +48,9 @@ export const Layout: FC<ILayout> = ({ onClose, children, opened }) => {
         unmountOnExit
         classNames={overlayAnimation}
       >
-        <div ref={overlayRef} className="overlay">
-          <Button close onClick={onClose}>
-            <CloseIcon />
-          </Button>
-        </div>
+        <InvisibleButtonEl onClick={onClose}>
+          <Overlay ref={overlayRef} />
+        </InvisibleButtonEl>
       </CSSTransition>
       <CSSTransition
         in={animationIn}
@@ -61,10 +60,15 @@ export const Layout: FC<ILayout> = ({ onClose, children, opened }) => {
         unmountOnExit
         classNames={contentAnimation}
       >
-        <div ref={contentRef} className="content">
-          {children}
-        </div>
+        <Content ref={contentRef}>
+          <>
+            <CloseButtonEl onClick={onClose}>
+              <CloseIcon />
+            </CloseButtonEl>
+            {children}
+          </>
+        </Content>
       </CSSTransition>
-    </div>
+    </Container>
   );
 };

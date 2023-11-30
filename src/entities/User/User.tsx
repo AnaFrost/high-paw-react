@@ -2,13 +2,13 @@ import React, { FC } from "react";
 import { UserAvatar } from "./userAvatar";
 import { UserInfo } from "./userInfo";
 
-import "./styles.css";
+import { UserEl } from "./User.styled";
 
 export const User: FC = () => {
   return (
-    <div className="user">
+    <UserEl>
       <UserAvatar />
-      <UserInfo name="Jacques-Meow Coustou" bio="Bed explorer" />
-    </div>
+      <UserInfo userName="Jacques-Meow Coustou" userBio="Bed explorer" />
+    </UserEl>
   );
 };

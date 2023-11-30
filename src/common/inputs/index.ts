@@ -1,2 +1,1 @@
-export * from "./Input";
-export * from "./radioInput";
+export * from "./Input.styled";

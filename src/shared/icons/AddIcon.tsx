@@ -3,7 +3,7 @@ import React from "react";
 export function AddIcon() {
   return (
     <svg
-      fill="white"
+      fill="var(--colors-text)"
       width="30px"
       height="30px"
       viewBox="0 0 1920 1920"
