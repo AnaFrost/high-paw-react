@@ -1,8 +1,7 @@
 import React, { FC, useState } from "react";
 import { LikeIcon, LikeActiveIcon } from "@icons";
-import { Button } from "../Button";
 
-import "../styles.css";
+import { LikeButtonEl } from "../Button.styled";
 
 export const LikeButton: FC = () => {
   const [isActive, setIsActive] = useState(false);
@@ -12,8 +11,8 @@ export const LikeButton: FC = () => {
   }
 
   return (
-    <Button like onClick={handleClick}>
+    <LikeButtonEl onClick={handleClick}>
       {!isActive ? <LikeIcon /> : <LikeActiveIcon />}
-    </Button>
+    </LikeButtonEl>
   );
 };

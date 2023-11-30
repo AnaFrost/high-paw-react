@@ -1,18 +1,21 @@
-.container {
-  position: fixed;
-  top: 180px;
-  left: 550px;
-  padding: 36px;
-  box-sizing: border-box;
+import styled from "styled-components";
 
+export const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   justify-content: center;
   align-items: center;
   z-index: 6;
-}
+`;
 
-.overlay {
+export const Overlay = styled.div`
+  cursor: pointer;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -22,15 +25,13 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 7;
-  cursor: pointer;
-}
+`;
 
-.content {
-  border: 1px solid #e6e6e6;
+export const Content = styled.div`
   box-sizing: border-box;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   overflow: auto;
-  background-color: #f8f8f8;
+  background-color: #fff;
   z-index: 8;
-}
+`;

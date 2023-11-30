@@ -1,4 +1,3 @@
-export * from "./Button";
+export * from "./Button.styled";
 export * from "./likeButton";
-export * from "./submitButton";
 export * from "./deleteButton";

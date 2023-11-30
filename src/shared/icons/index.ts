@@ -7,3 +7,6 @@ export { CatMarkerIcon } from "./CatMarkerIcon";
 export { DogMarkerIcon } from "./DogMarkerIcon";
 export { UnicornMarkerIcon } from "./UnicornMarkerIcon";
 export { TrashBinIcon } from "./TrashBinIcon";
+export { MoonIcon } from "./MoonIcon";
+export { SunIcon } from "./SunIcon";
+export { LogoIcon } from "./LogoIcon";

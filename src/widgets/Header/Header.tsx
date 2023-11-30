@@ -1,14 +1,39 @@
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
 
-import logo from "@images/icon-paw.svg";
+import { Container } from "@common/container";
+import { SunIcon, MoonIcon, LogoIcon } from "@icons";
 
-import "./styles.css";
+import {
+  HeaderEl,
+  ThemeSwitcher,
+  Title,
+  Wrapper,
+  WrapperLogoTitle,
+} from "./Header.styled";
 
 export const Header: FC = () => {
+  const [theme, setTheme] = useState("dark");
+
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+  }, [theme]);
+
   return (
-    <header className="header">
-      <h1 className="header__title">High paw</h1>
-      <img src={logo} className="header__logo" alt="High Paw logo" />
-    </header>
+    <HeaderEl>
+      <Container>
+        <Wrapper>
+          <WrapperLogoTitle>
+            <Title>High paw</Title>
+            {<LogoIcon />}
+          </WrapperLogoTitle>
+          <ThemeSwitcher onClick={toggleTheme}>
+            {theme === "dark" ? <MoonIcon /> : <SunIcon />}
+            <span style={{ marginLeft: "8px" }}>{theme} Theme</span>
+          </ThemeSwitcher>
+        </Wrapper>
+      </Container>
+    </HeaderEl>
   );
 };

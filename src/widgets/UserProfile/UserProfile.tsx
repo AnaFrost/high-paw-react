@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import { User } from "@entities/user";
 
-import "./styles.css";
+import { UserProfileEl } from "./UserProfile.styled";
 
 export const UserProfile: FC = () => {
   return (
-    <section className="user-profile">
+    <UserProfileEl>
       <User />
-    </section>
+    </UserProfileEl>
   );
 };

@@ -1,13 +1,12 @@
 import React, { FC } from "react";
 import { TrashBinIcon } from "@icons";
-import { Button } from "../Button";
 
-import "../styles.css";
+import { DeleteButtonEl } from "../Button.styled";
 
 export const DeleteButton: FC = () => {
   return (
-    <Button del>
+    <DeleteButtonEl>
       <TrashBinIcon />
-    </Button>
+    </DeleteButtonEl>
   );
 };

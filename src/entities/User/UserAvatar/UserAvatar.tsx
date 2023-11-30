@@ -2,8 +2,8 @@ import React, { FC } from "react";
 
 import user_avatar from "@images/haru.jpg";
 
-import "./styles.css";
+import { UserAvatarEl } from "../User.styled";
 
 export const UserAvatar: FC = () => {
-  return <img src={user_avatar} className="user__avatar" alt="avatar" />;
+  return <UserAvatarEl src={user_avatar} alt="avatar" />;
 };

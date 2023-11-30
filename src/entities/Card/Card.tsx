@@ -1,28 +1,53 @@
-import React, { FC } from "react";
-import { LikeButton, DeleteButton } from "@common/buttons";
+import React, { FC, useState } from "react";
+import { LikeButton, DeleteButton, InvisibleButtonEl } from "@common/buttons";
 
 import "./styles.css";
+import { AnimatedModal } from "@common/animatedModal";
+import {
+  CardEl,
+  Title,
+  CardImageInPopup,
+  CardImage,
+  DiscriptionContainerInPopup,
+  PopupWithImage,
+  MarkerImage,
+  DiscriptionContainer,
+} from "./Card.styled";
 
 interface ICard {
   image: string;
-  typeAnimal: React.ReactNode;
+  typePet: React.ReactNode;
   text: string;
 }
 
-export const Card: FC<ICard> = ({ image, typeAnimal, text }) => {
+export const Card: FC<ICard> = ({ image, typePet, text }) => {
+  const [opened, setOpened] = useState(false);
+
   return (
-    <div className="card">
-      <img src={image} className="card__image" alt="card" />
+    <CardEl>
+      <InvisibleButtonEl onClick={() => setOpened(true)}>
+        <CardImage src={image} alt="card" />
+      </InvisibleButtonEl>
+
+      <AnimatedModal opened={opened} onClose={() => setOpened(false)}>
+        <PopupWithImage>
+          <CardImageInPopup src={image} alt="card" />
+          <DiscriptionContainerInPopup>
+            <Title>{text}</Title>
+          </DiscriptionContainerInPopup>
+        </PopupWithImage>
+      </AnimatedModal>
+
       <div className="card-marker">
-        <div className="marker__image">{typeAnimal}</div>
+        <MarkerImage>{typePet}</MarkerImage>
         <div className="card-marker__menu">
           <DeleteButton />
         </div>
       </div>
-      <div className="card__discription">
-        <h3 className="card__title">{text}</h3>
+      <DiscriptionContainer>
+        <Title>{text}</Title>
         <LikeButton />
-      </div>
-    </div>
+      </DiscriptionContainer>
+    </CardEl>
   );
 };
