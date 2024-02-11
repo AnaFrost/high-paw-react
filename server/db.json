@@ -1,0 +1,58 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "url": "../shared/images/goliaf.jpg",
+      "type": "cat",
+      "description": "I`m sweety chocolate maffin"
+    },
+    {
+      "id": 2,
+      "url": "../shared/images/lakita1.jpg",
+      "type": "cat",
+      "description": "i`m Luckyy and i`m cute"
+    },
+    {
+      "id": 3,
+      "url": "../shared/images/prudence1.jpg",
+      "type": "dog",
+      "description": "Hey, find me :з"
+    },
+    {
+      "id": 4,
+      "url": "../shared/images/myaka1.jpg",
+      "type": "cat",
+      "description": "Meowlax"
+    },
+    {
+      "id": 5,
+      "url": "../shared/images/prudence2.jpg",
+      "type": "dog",
+      "description": "Puppy U・ᴥ・U"
+    },
+    {
+      "id": 6,
+      "url": "../shared/images/rats2.jpg",
+      "type": "other",
+      "description": "Rats <3"
+    },
+    {
+      "id": 7,
+      "url": "../shared/images/lakky2.jpg",
+      "type": "cat",
+      "description": "Nya nya"
+    },
+    {
+      "id": 8,
+      "url": "../shared/images/lakky1.jpg",
+      "type": "cat",
+      "description": ":3"
+    },
+    {
+      "id": 9,
+      "url": "../shared/images/myaka2.jpg",
+      "type": "cat",
+      "description": "O_O"
+    }
+  ]
+}

@@ -1,18 +1,5 @@
 import styled from "styled-components";
 
-// export const ButtonEl = styled.button`
-//   cursor: pointer;
-//   padding: 0;
-//   color: var(--colors-text);
-//   background-color: transparent;
-//   transition: 0.3s opacity ease-in;
-
-//   &:hover {
-//     opacity: 0.6;
-//     transition: 0.3s opacity ease-in;
-//   }
-// `;
-
 export const EditProfileButtonEl = styled.button`
   cursor: pointer;
   border: 2px solid;
@@ -47,14 +34,10 @@ export const AddCardButtonEl = styled.button`
 
 export const LikeButtonEl = styled.button`
   cursor: pointer;
-  position: absolute;
-  bottom: 12px;
-  right: 14px;
   border: none;
-  width: 26px;
-  height: 26px;
   background-color: transparent;
   transition: 0.3s transform ease-in;
+  padding: 0;
 
   &:hover {
     transform: scale(1.1);
@@ -77,12 +60,14 @@ export const DeleteButtonEl = styled.button`
   cursor: pointer;
   color: var(--colors-text);
   background-color: transparent;
-  width: 100%;
-  padding: 0;
-  visibility: hidden;
-  opacity: 0;
   border: none;
   transition: 0.3s all ease-in;
+  padding: 0;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s transform ease-in;
+  }
 `;
 
 export const InvisibleButtonEl = styled.button`

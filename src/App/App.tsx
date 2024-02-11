@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Header } from "@widgets/header";
 import { UserProfile } from "@widgets/userProfile";
 import { Gallery } from "@widgets/gallery";

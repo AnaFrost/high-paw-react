@@ -1,8 +1,10 @@
 import React, { FC, useState } from "react";
-import { LikeButton, DeleteButton, InvisibleButtonEl } from "@common/buttons";
+import { LikeButton, DeleteButtonEl, InvisibleButtonEl } from "@common/buttons";
 
-import "./styles.css";
+import { TrashBinIcon } from "@icons";
+
 import { AnimatedModal } from "@common/animatedModal";
+
 import {
   CardEl,
   Title,
@@ -10,21 +12,22 @@ import {
   CardImage,
   DiscriptionContainerInPopup,
   PopupWithImage,
-  MarkerImage,
   DiscriptionContainer,
+  ButtonsPanel,
 } from "./Card.styled";
 
 interface ICard {
+  id: number;
   image: string;
-  typePet: React.ReactNode;
   text: string;
+  onDeleted: () => void;
 }
 
-export const Card: FC<ICard> = ({ image, typePet, text }) => {
+export const Card: FC<ICard> = ({ id, image, text, onDeleted }) => {
   const [opened, setOpened] = useState(false);
 
   return (
-    <CardEl>
+    <CardEl key={id}>
       <InvisibleButtonEl onClick={() => setOpened(true)}>
         <CardImage src={image} alt="card" />
       </InvisibleButtonEl>
@@ -37,16 +40,15 @@ export const Card: FC<ICard> = ({ image, typePet, text }) => {
           </DiscriptionContainerInPopup>
         </PopupWithImage>
       </AnimatedModal>
-
-      <div className="card-marker">
-        <MarkerImage>{typePet}</MarkerImage>
-        <div className="card-marker__menu">
-          <DeleteButton />
-        </div>
-      </div>
       <DiscriptionContainer>
         <Title>{text}</Title>
-        <LikeButton />
+
+        <ButtonsPanel>
+          <DeleteButtonEl onClick={onDeleted}>
+            <TrashBinIcon />
+          </DeleteButtonEl>
+          <LikeButton />
+        </ButtonsPanel>
       </DiscriptionContainer>
     </CardEl>
   );
